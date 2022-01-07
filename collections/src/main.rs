@@ -1,3 +1,4 @@
+mod hashmap_example;
 mod string_example;
 mod vector_example;
 
@@ -12,5 +13,10 @@ fn main() {
     string_example::create();
     string_example::update();
     string_example::slicing();
-    string_example::iterating();
+    string_example::iterate();
+
+    hashmap_example::create();
+    hashmap_example::update();
+    hashmap_example::read();
+    hashmap_example::iterate();
 }

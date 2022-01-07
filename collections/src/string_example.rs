@@ -52,7 +52,7 @@ pub fn slicing() {
     println!("{}", s);
 }
 
-pub fn iterating() {
+pub fn iterate() {
     for c in "नमस्ते".chars() {
         println!("{}", c);
     }
