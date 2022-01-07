@@ -4,6 +4,7 @@ fn main() {
     data_types();
     numeric_operators();
     char_types();
+    compound_types();
 }
 
 fn mutability() {
@@ -59,4 +60,11 @@ fn char_types() {
     let heart_eyed_cat = '😻';
 
     println!("c = {}, z = {}, heart_eyed_cat = {}", c, z, heart_eyed_cat);
+}
+
+fn compound_types() {
+    let tup: (i32, f64, u8) = (500, 7.2, 1);
+    println!("tup = {:?}", tup);
+    let (x, y, z) = tup;
+    println!("x = {}, y = {}, z = {}", x, y, z);
 }
