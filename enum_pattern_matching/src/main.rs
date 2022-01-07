@@ -1,12 +1,11 @@
 fn main() {
     println!("Hello, world!");
 
-    let home = IpAddr::V4(127,0,0,1);
+    let home = IpAddr::V4(127, 0, 0, 1);
     let loopback = IpAddr::V6(String::from("::1"));
 
     dbg!(home);
     dbg!(loopback);
-     
     let message = Message::Write(String::from("hello"));
     message.call();
     let message = Message::Move { x: 3, y: 4 };
@@ -26,9 +25,8 @@ fn main() {
 
     let x: i8 = 5;
     let y: Option<i8> = Some(5);
-    
     let num = x + y.unwrap_or_else(|| 0);
-    println!("{}", num);    
+    println!("{}", num);
 
     // Match
     let coin = Coin::Quarter(UsState::Alabama);
@@ -58,7 +56,6 @@ fn main() {
         println!("Max is {}", max);
     }
 }
-
 
 fn plus_one(x: Option<i32>) -> Option<i32> {
     match x {
@@ -91,7 +88,7 @@ impl Coin {
             Coin::Quarter(state) => {
                 println!("State quarter from {:?}!", state);
                 25
-            },
+            }
         }
     }
 }

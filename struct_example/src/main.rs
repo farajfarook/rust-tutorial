@@ -3,7 +3,7 @@ fn main() {
     let rect = Rectangle {
         width: dbg!(30 * scale),
         height: 50,
-    };    
+    };
 
     println!("rect1 is {:#?}", rect);
 
@@ -39,7 +39,6 @@ struct Rectangle {
 }
 
 impl Rectangle {
-
     fn square(size: u32) -> Rectangle {
         Rectangle {
             width: size,
@@ -49,12 +48,11 @@ impl Rectangle {
 }
 
 impl Rectangle {
-    
     fn area(&self) -> u32 {
         self.width * self.height
     }
 
-    fn can_hold(&self, other: &Rectangle) -> bool{
+    fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
     }
 }
