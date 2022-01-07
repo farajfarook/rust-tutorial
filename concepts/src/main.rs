@@ -2,6 +2,7 @@ fn main() {
     mutability();
     shadowing();
     data_types();
+    numeric_operators();
 }
 
 fn mutability() {
@@ -33,4 +34,20 @@ fn data_types() {
     let delta = y - x; // this changes x to f32
 
     println!("delta = {}", delta);
+}
+
+fn numeric_operators() {
+    let x = 2.0;
+    let y: f32 = 3.0;
+
+    let sum = x + y;
+    let difference = x - y;
+    let product = x * y;
+    let quotient = x / y;
+    let remainder = x % y;
+
+    println!(
+        "sum = {}, difference = {}, product = {}, quotient = {}, remainder = {}",
+        sum, difference, product, quotient, remainder
+    );
 }
