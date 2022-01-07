@@ -5,6 +5,11 @@ fn main() {
     numeric_operators();
     char_types();
     compound_types();
+    array_types();
+
+    print_labeled_measurement(7, 'm');
+
+    function_with_returns();
 }
 
 fn mutability() {
@@ -67,4 +72,46 @@ fn compound_types() {
     println!("tup = {:?}", tup);
     let (x, y, z) = tup;
     println!("x = {}, y = {}, z = {}", x, y, z);
+}
+
+fn array_types() {
+    let a = [1, 2, 3, 4, 5];
+    let months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
+    print!("a = {:?}, months = {:?}", a, months);
+    let b = [3; 5]; // [3, 3, 3, 3, 3]
+    println!("b = {:?}", b);
+    let first = a[0];
+    let second = a[1];
+    println!("first = {}, second = {}", first, second);
+
+    //let index = 10;
+    //et element = a[index];
+    //println!("a[{}] = {}", index, element);
+}
+
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {}{}", value, unit_label);
+}
+
+fn function_with_returns() {
+    let sum: u32 = add_numbers(5, 6);
+    println!("The sum is: {}", sum);
+}
+
+fn add_numbers(a: u32, b: u32) -> u32 {
+    let sum = a + b;
+    sum
 }
