@@ -10,6 +10,10 @@ fn main() {
     print_labeled_measurement(7, 'm');
 
     function_with_returns();
+
+    if_else();
+    loop_example();
+    while_for_example();
 }
 
 fn mutability() {
@@ -114,4 +118,65 @@ fn function_with_returns() {
 fn add_numbers(a: u32, b: u32) -> u32 {
     let sum = a + b;
     sum
+}
+
+fn if_else() {
+    let temp = 10;
+    if temp > 30 {
+        println!("It's hot outside!");
+    } else if temp < 10 {
+        println!("It's pretty cold outside!");
+    } else {
+        println!("It's ok outside!");
+    }
+
+    let value = if true { 10 } else { -1 };
+    println!("value = {}", value);
+}
+
+fn loop_example() {
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+    println!("The result is {}", result);
+
+    let mut number = 3;
+    let result = loop {
+        number += 1;
+        if number == 10 {
+            break number;
+        }
+    };
+    println!("The result is {}", result);
+}
+
+fn while_for_example() {
+    let mut number = 3;
+    while number != 0 {
+        println!("{}!", number);
+        number -= 1;
+    }
+
+    let a = [10, 20, 30, 40, 50];
+    let mut index = 0;
+    while index < a.len() {
+        println!("the value is: {}", a[index]);
+        index += 1;
+    }
+
+    for elem in a {
+        println!("the element value is: {}", elem);
+    }
+
+    for number in (1..4).rev() {
+        println!("{}!", number);
+    }
+
+    for number in [3; 5] {
+        println!("{}!", number);
+    }
 }
