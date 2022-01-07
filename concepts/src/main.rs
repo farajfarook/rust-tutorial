@@ -3,6 +3,7 @@ fn main() {
     shadowing();
     data_types();
     numeric_operators();
+    char_types();
 }
 
 fn mutability() {
@@ -50,4 +51,12 @@ fn numeric_operators() {
         "sum = {}, difference = {}, product = {}, quotient = {}, remainder = {}",
         sum, difference, product, quotient, remainder
     );
+}
+
+fn char_types() {
+    let c = 'z';
+    let z = 'ℤ';
+    let heart_eyed_cat = '😻';
+
+    println!("c = {}, z = {}, heart_eyed_cat = {}", c, z, heart_eyed_cat);
 }
